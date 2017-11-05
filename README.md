@@ -20,7 +20,7 @@
 
 #### Moringa School, StackOverflow.com and W3 schools.
 
-#**Setup / installation**
+# **Setup / installation**
 
 ####git clone https://github.com/montecarlos97/pig-dice Open the index.html file with the browser of your choice
 
