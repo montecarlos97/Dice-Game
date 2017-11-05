@@ -22,7 +22,7 @@
 
 #**Setup / installation**
 
-####git clone https://montecarlos97.github.io/Dice-Game/ Open the index.html file with the browser of your choice
+#### git clone https://montecarlos97.github.io/Dice-Game/ Open the index.html file with the browser of your choice
 
 # **Specifications**
 
@@ -33,9 +33,9 @@
 
 #### HTML5, CSS , Bootstrap, Javascript and Jquery
 
-#**Known Bugs**
+# **Known Bugs**
 
-####No known Bugs
+#### No known Bugs
 
 # **Support and Contacts**
 
@@ -43,8 +43,8 @@
 
 # License
 
-#**MIT License**
+# **MIT License**
 
-####This software is licensed under the MIT license.
+This software is licensed under the MIT license.
 
 **Copyright (c) 2017 *Tonny Magaki***
