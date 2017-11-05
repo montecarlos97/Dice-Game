@@ -1,0 +1,89 @@
+
+
+
+.gaming{
+	display: none;
+}
+
+.col-md-5{
+	text-align: center;
+}
+
+.col-md-2{
+	text-align: center;
+}
+
+.col-md-5 button{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(10, 0, 0, 0.19);
+}
+
+#newer{
+	text-align: center;
+}
+
+#start{
+	margin-top: 20px;
+	position: relative;
+	justify-content: center;
+}
+
+#start:hover{
+	box-shadow: 2px 2px 2px 2px rgb(100, 100, 100);
+}
+
+#footer{
+	position: relative;
+	display: none;
+	background-color: #eee;
+	padding: 30px;
+	margin-top: 50px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#level{
+	position: absolute;
+	padding: 10px 30px;
+}
+
+#level:hover{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#btn_level{
+	display: flex;
+	justify-content: space-around;
+}
+
+#len{
+	width: 70px;
+}
+
+#len:hover{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

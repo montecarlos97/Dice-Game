@@ -1,130 +1,63 @@
 //backend
 
-  //blank variable to save registering players
-var player1 = "";
-var player2 = "";
+  // blank variable to save registering players
+var Player = {};
 
-var tossdice = function() {
-  return Math.floor(Math.random() *6 + 1);
-};
 
-//player constuctor
-function Player(turn) {
-  this.toss = 0;
-  this.tempscore = 0;
-  this.totalscore = 0;
-  this.turn = turn;
-  this.playerName = "";
+function tonney(){
+  return Math.floor(Math.random() * 6) + 1; 
 }
 
-    //prototypes
-Player.prototype.tossone = function() {
-  if (this.toss === 1) {
-    this.tempscore = 0;
-    alert("Sorry " + this.playerName + ", you rolled a 1! Game Over!");
 
-  } else {
-    this.tempscore += this.toss;
-  }
-};
-
-Player.prototype.hold = function() {
-  this.totalscore += this.tempscore;
-  this.tempscore = 0;
-  alert(this.playerName + " Game Over! Pass To The Next Player!!");
-};
-
-Player.prototype.checkWinner = function() {
-  if (this.totalscore >= 100) {
-    alert(this.playerName + " You are the winner!");
-  }
-};
-
-Player.prototype.newGame = function() {
-  this.toss = 0;
-  this.tempscore = 0;
-  this.totalscore = 0;
-  this.playerName = "";
-};
+$(function() {
 
 
-//front end
-
-$(document).ready(function() {
-
-  $("button#start").click(function(event) {
-    player1 = new Player(true);
-    player2 = new Player(false);
-
+  $("form").submit(function(event) {
+    event.preventDefault();
+    var player_1 = $(".player1Name").val();
+    var player_2 = $(".player2Name").val();
     $(".gaming").show();
-    $(".start-menu").hide();
-
-    var player1Name = $(".player1Name").val();
-
-    $("#player1Name").text(player1Name);
-
-    var player2Name = $(".player2Name").val();
-
-    $("#player2Name").text(player2Name);
-
-    player1.playerName = player1Name;
-    player2.playerName = player2Name;
-
+    $("#footer").show();
+    $("#player1Name").text(player_1);
+    $("#player2Name").text(player_2);
   });
 
+
   $("button#new-game").click(function(event) {
+    event.preventDefault();
     $(".gaming").hide();
-      clearValues();
-        player1.newGame();
-        player2.newGame();
-        $("#die-toss-1").empty();
-
-    $("#round-total-1").empty();
-     $("#total-score-1").empty();
-       $("#round-total-2").empty();
-        $("#total-score-2").empty();
-         $("#die-toss-2").empty();
-
-    $(".start-menu").show();
+    $(".player1Name").val("");
+    $(".player2Name").val("");
   });
 
   $("button#player1-toss").click(function(event) {
-    player1.toss = throwdice();
+    event.preventDefault();
+    var score1 = tonney();
+    $("#total-score-1").html(score1);
 
-      $("#die-toss-1").text(player1.toss);
-        player1.tossone();
-
-      $("#round-total-1").text(player1.tempscore);
-    });
-
-    $("button#player2-toss").click(function(event) {
-      player2.roll = throwdice();
-
-      $("#die-toss-2").text(player2.toss);
-        player2.tossone();
-
-      $("#round-total-2").text(player2.tempscore);
-    });
-
-
-    $("button#player1-hold").click(function(event) {
-      player1.hold();
-
-      $("#total-score-1").text(player1.totalscore);
-       $("#round-total-1").empty();
-        $("#die-toss-1").empty();
-
-       player1.winnerCheck();
-     });
-
-     $("button#player2-hold").click(function(event) {
-       player2.hold();
-
-       $("#total-score-2").text(player2.totalscore);
-        $("#round-total-2").empty();
-         $("#die-toss-2").empty();
-
-       player2.winnerCheck();
-     });
+    $("#round-total-1").html("The total is " + score1);
 
     });
+
+  $("button#player2-toss").click(function(event) {
+    event.preventDefault();
+    var score2 = tonney();
+    $("#total-score-2").html(score2);
+
+    $("#round-total-2").html("The total is " + score2);
+  });
+
+  $("#lev1").click(function(event) {
+    $("body").css("background-color", "#f1f3f1")
+  });
+
+  $("#lev2").click(function(event) {
+    $("body").css("background-color", "#f1f344")
+  });
+
+  $("#lev3").click(function(event) {
+    $("body").css("background-color", "#f13344")
+  });
+
+
+});
