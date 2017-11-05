@@ -20,7 +20,7 @@
 
 #### Moringa School, StackOverflow.com and W3 schools.
 
-#**Setup / installation**
+# **Setup / installation**
 
 #### git clone https://montecarlos97.github.io/Dice-Game/ Open the index.html file with the browser of your choice
 
