@@ -6,7 +6,7 @@
 
 # **Description**
 
-####**This is a program where two users can play Pig Dice against each other. Users can choose to play with one die or two.**
+#### **This is a program where two users can play Pig Dice against each other. Users can choose to play with one die or two.**
 
 # **Installation**
 
